@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задачи</title>
+	<link rel="stylesheet" href="static/style.css">
+	<script src="static/requests.js" defer></script>
+	<script src="static/checkNumber.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Задачи</h1>
+		<p>
+			{{problem|safe}}
+			<input type="number" id="answer"><sub> {{answer_base}}</sub>
+		</p>
+		<button id="check">Проверить</button>
+		<span id="result"></span>
+		<p><span id="done"></span></p>
+		<button id="results" style="display: none">Показать результаты (пожалуйста)</button>
+	</div>
+</body>
+</html>

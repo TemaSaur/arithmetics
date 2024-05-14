@@ -1,69 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hello world</title>
+	<title>Арифметические операции над битовыми данными</title>
+	<link rel="stylesheet" href="static/style.css">
 	<link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 	<div class="container">
-		<h1>Название проекта</h1>
-		<p>Используя шаблоны Jinja2 можно подставить нужные данные. Например:</p>
-		<p>Cтраница была загружена {{ counter }} раз с запуска сервера. Для отображения этого числа можно написать <code>{% raw %}{{ counter }}{% endraw %}</code></p>
+		<h1>Арифметические операции над битовыми данными</h1>
+		<form action="problemset" method="GET">
+			<label for="name">Введите имя пользователя</label>
+			<input type="text" name="name"><br>
 
-		<br>
-
-		<p>Также можно писать условия</p>
-		<code class="block">{% raw %}{% if number > 5 %}
-	{{ number }}
-{% else %}
-	не больше пяти
-{% endif %}{% endraw %}</code>
-		<p>number = <input type="number" value="{{ number }}"></p>
-		<p>Результат:</p>
-		<p>
-			{% if number > 5 %}
-				{{ number }}
-			{% else %}
-				не больше пяти
-			{% endif %}
-		</p>
-
-		<br>
-
-		<p>Также можно писать циклы похожие на код Python</p>
-		<code class="block">{% raw %}{% for x in range(10) %}
-	{{ x }}
-{% endfor %}{% endraw %}</code>
-		<p>Результат:</p>
-		<p>
-			{% for x in range(10) %}
-				{{ x }}
-			{% endfor %}
-		</p>
-
-		<br>
-
-		<p>И конечно же можно итерировать по спискам</p>
-		<code class="block">{% raw %}{% for x in collection %}
-	{{ x }}&lt;br&gt;
-{% endif %}{% endraw %}</code>
-		<p>Результат:</p>
-		<p>
-			{% for x in collection %}
-				{{ x }}<br>
-			{% endfor %}
-		</p>
+			<label for="tries">Введите количество попыток</label>
+			<input type="number" name="tries" min="1" max="3"><br>
+			<button type="submit"> Далее </button>
+		</form>
 	</div>
-
-	<script>
-		window.onload = () => {
-			const input = document.querySelector('input[type="number"]');
-			input.onchange = (e) => {
-				window.location.href = window.location.protocol + '//' + window.location.host + `/?number=${e.target.value}`
-			}
-		}
-	</script>
 </body>
 </html>

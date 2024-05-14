@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Результаты</title>
+	<link rel="stylesheet" href="static/style.css">
+	<script src="static/requests.js" defer></script>
+	<script src="static/checkNumber.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Результаты</h1>
+		<table border="10">
+			<thead>
+				<th>Попытка №</th>
+				<th>Ваш ответ</th>
+				<th>Правильный ответ</th>
+				<th>Результат</th>
+			</thead>
+			<tbody>
+				{% for res in results %}
+					<tr>
+						<td>{{res.number}}</td>
+						<td>{{res.answer}}</td>
+						<td>{{res.actual_answer}}</td>
+						<td>{{res.result}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<p>Оценка</p>
+		{{ mark }}
+		<p><label for="comment">Ваше мнение очень важно для нас</label></p>
+		<textarea id="comment" ></textarea>
+		<button id="sendComment" onclick="alert('thx')">Отправить</button>
+	</div>
+</body>
+</html>
